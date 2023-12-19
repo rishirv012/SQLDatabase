@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.CourseSearchController">
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+            <TextField fx:id="searchSubjectField" promptText="Subject"/>
+            <TextField fx:id="searchNumberField" promptText="Number"/>
+            <TextField fx:id="searchTitleField" promptText="Title"/>
+            <Button text="Search" onAction="#handleSearchButtonAction"/>
+            <Button text="Add Course" onAction="#handleAddCourseButtonAction"/>
+            <Button text="My Reviews" onAction="#handleViewMyReviewsButtonAction"/>
+            <Button text="Logout" onAction="#handleLogoutButtonAction"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="coursesTable">
+            <columns>
+                <TableColumn fx:id="subjectColumn" text="Subject"/>
+                <TableColumn fx:id="numberColumn" text="Number"/>
+                <TableColumn fx:id="titleColumn" text="Title"/>
+                <TableColumn fx:id="averageRatingColumn" text="Average Rating"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

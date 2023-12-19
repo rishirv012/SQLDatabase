@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.CourseReviewController" spacing="10">
+    <Label fx:id="courseDetailsLabel" /> <!-- Add this line -->
+    <Label fx:id="averageRatingLabel" /> <!-- Add this line -->
+    <ListView fx:id="reviewsListView" />
+    <HBox spacing="10">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10" />
+        </padding>
+        <TextField fx:id="ratingField" promptText="Rating (1-5)" />
+        <TextArea fx:id="commentArea" promptText="Comment" />
+    </HBox>
+    <Button text="Submit Review" onAction="#handleSubmitReviewButtonAction" />
+    <Button text="Back" onAction="#handleBackButtonAction" />
+</VBox>
